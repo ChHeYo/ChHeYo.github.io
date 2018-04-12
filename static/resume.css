@@ -1,0 +1,86 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 60px;
+}
+
+body a:hover {
+    color: black;
+}
+
+.container {
+    text-align: center;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.various-links {
+    background: #3A99D9;
+    padding: 10px 50px;
+    opacity: 0.9;
+}
+
+.various-links:hover {
+    opacity: 1.0;
+}
+
+.contacts-title, .various-links a {
+    color: white;
+}
+
+.contacts-title {
+    margin: 0px 0px 30px 0px;
+}
+
+.various-links a:hover {
+    color: black;
+}
+
+.each-link {
+    margin: 10px 0px;
+    padding: 10px 0px;
+}
+
+.duration,
+.role-title, 
+.job-detail, 
+.skill-list,
+.degree {
+    margin: 0px;
+    font-size: 12px;
+}
+
+.degree {
+    margin-bottom: 5px;
+}
+
+.resume-main-body {
+    text-align: left;
+}
+
+.years {
+    text-align: right;
+}
+
+.hobby-title {
+    margin: 0px;
+}
+
+.hobby-subtitle {
+    margin: 0px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+#resume-name {
+    font-weight: 100;
+}
+
+/* .points {
+    background: red;
+}
+
+.pointz {
+    background: blue;
+} */
