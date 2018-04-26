@@ -1,0 +1,220 @@
+body {
+    margin: 0px;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 15px;
+    color: #eee;
+}
+
+/*----------------------------------------*/
+/*REUSABLE COMP/
+/*----------------------------------------*/
+
+ul {
+    list-style: none;
+}
+
+.icons {
+    color: #eee;
+    transition: color 0.5s;
+}
+
+.icons:hover,
+.icons:active {
+    color: rgb(130, 154, 233);
+}
+
+header {
+    box-shadow: 0 1px 1px #eee;
+}
+
+/*----------------------------------------*/
+/*SMALL NAV*/
+/*----------------------------------------*/
+
+.small-nav {
+    background-color: #043964;
+    width: 100%;
+    font-size: 80%;
+    padding-top: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.small-nav ul {
+    list-style: none;
+    margin: 0;
+    float: left;
+    padding-bottom: 5px;
+}
+
+.small-nav ul li {
+    display: inline-block;
+    padding: 0 4px;
+    margin: 0;
+}
+
+.small-nav ul:first-of-type li:first-child {
+    padding-left: 0;
+}
+
+.small-nav ul:last-of-type li:last-child {
+    padding-right: 0;
+}
+
+.small-nav ul:first-of-type {
+    padding-top: 1px;
+}
+
+.small-nav ul:last-of-type {
+    float: right;
+}
+
+.small-nav .icons {
+    font-size: 120%;
+}
+
+.phone-icon,
+.email-icon {
+    padding-right: 4px;
+}
+
+.btn {
+    background: #043964;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    color: #fff;
+    background: #021b30; 
+}
+
+/*----------------------------------------*/
+/*BIG NAV*/
+/*----------------------------------------*/
+
+.main-nav {
+    text-transform: capitalize;
+    background-color: #fff;
+    font-size: 130%;
+    font-weight: 300;
+    color: rgb(117, 117, 117);
+    width: 100%;
+    position: fixed;
+    z-index: 9998;
+    top: 28;
+    left: 0;
+    opacity: 0.95;
+}
+
+@media only screen and (max-width:480px){
+    .main-nav {
+        display: none;
+    }
+}
+
+.main-nav img {
+    float: left;
+    width: 10%;
+    height: auto;
+}
+
+.main-nav ul {
+    padding-top: 30px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    padding-right: 20px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-bottom 0.5s;
+}
+
+.main-nav ul li:hover,
+.main-nav ul li:active {
+    color: rgb(130, 154, 233);
+    cursor: pointer;
+    border-bottom: 1px solid #043964; 
+}
+
+.main-nav ul li:last-child {
+    padding-right: 0;
+}
+
+/*----------------------------------------*/
+/*BANNER*/
+/*----------------------------------------*/
+
+.banner-section {
+    margin-top: 28px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/meeting.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*----------------------------------------*/
+/*MIDDLE SECTION*/
+/*----------------------------------------*/
+
+.middle-section {
+    padding: 50px 0;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    color: #043964;
+    line-height: 180%;
+}
+
+.middle-section h2 {
+    margin-bottom: 60px;
+}
+
+/*----------------------------------------*/
+/*JSDEMO*/
+/*----------------------------------------*/
+
+.js-demo {
+    text-align: center;
+    padding: 50px 0;
+    color: rgb(99, 99, 99);
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width:480px){
+    .js-demo h2 {
+        font-size: 180%;
+    }
+    .column {
+        margin-bottom: 50px;
+    }
+    .column:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+/*----------------------------------------*/
+/*FOOTER*/
+/*----------------------------------------*/
+
+.footer {
+    background-color: rgb(66, 66, 66);
+    text-align: center;
+    padding: 40px 0 10px 0;
+}
