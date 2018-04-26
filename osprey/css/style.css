@@ -27,59 +27,6 @@ header {
     box-shadow: 0 1px 1px #eee;
 }
 
-/*----------------------------------------*/
-/*SMALL NAV*/
-/*----------------------------------------*/
-
-.small-nav {
-    background-color: #043964;
-    width: 100%;
-    font-size: 80%;
-    padding-top: 5px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-}
-
-.small-nav ul {
-    list-style: none;
-    margin: 0;
-    float: left;
-    padding-bottom: 5px;
-}
-
-.small-nav ul li {
-    display: inline-block;
-    padding: 0 4px;
-    margin: 0;
-}
-
-.small-nav ul:first-of-type li:first-child {
-    padding-left: 0;
-}
-
-.small-nav ul:last-of-type li:last-child {
-    padding-right: 0;
-}
-
-.small-nav ul:first-of-type {
-    padding-top: 1px;
-}
-
-.small-nav ul:last-of-type {
-    float: right;
-}
-
-.small-nav .icons {
-    font-size: 120%;
-}
-
-.phone-icon,
-.email-icon {
-    padding-right: 4px;
-}
-
 .btn {
     background: #043964;
     padding: 10px;
@@ -100,16 +47,22 @@ header {
 
 .main-nav {
     text-transform: capitalize;
-    background-color: #fff;
+    background-color: transparent;
     font-size: 130%;
     font-weight: 300;
     color: rgb(117, 117, 117);
     width: 100%;
-    position: fixed;
     z-index: 9998;
-    top: 28;
+    top: 30px;
     left: 0;
     opacity: 0.95;
+    position: absolute;
+}
+
+.nav-container {
+    background: #000;
+    border-radius: 5px;
+    color: #fff;
 }
 
 @media only screen and (max-width:480px){
@@ -139,13 +92,9 @@ header {
 
 .main-nav ul li:hover,
 .main-nav ul li:active {
-    color: rgb(130, 154, 233);
+    color: rgb(245, 194, 117);
     cursor: pointer;
-    border-bottom: 1px solid #043964; 
-}
-
-.main-nav ul li:last-child {
-    padding-right: 0;
+    border-bottom: 1px solid #fff; 
 }
 
 /*----------------------------------------*/
@@ -153,7 +102,6 @@ header {
 /*----------------------------------------*/
 
 .banner-section {
-    margin-top: 28px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/meeting.jpg");
     background-size: cover;
     background-position: center;
@@ -162,7 +110,12 @@ header {
     background-attachment: fixed;
 }
 
+.demo-heading {
+    border:10px solid rgb(245, 194, 117);
+}
+
 .banner-text {
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
