@@ -1,47 +1,162 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif; }
+
 body {
-    background: #3A99D9;
-    background: radial-gradient(circle,#3A99D9, #2D78AA);
-    font-family: 'Roboto', sans-serif;
-}
+  box-sizing: border-box; }
 
-html, body {
-    height: 100%;
-}
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    opacity: 0.8;
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
-.main-div {
-    text-align: center;
-}
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    opacity: 0.8;
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
-.loadinGif {
-    display: block;
-}
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  80% {
+    opacity: 0.8;
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
-.title{
-    color: white;
-    display: none;
-}
+@keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
-.hello, .my-name {
-    margin: 0px;
+.main_page {
+  background-image: radial-gradient(circle, #4b6cb7, rgba(24, 40, 72, 0.98));
+  background-size: cover;
+  height: 100vh;
+  background-position: top;
+  position: relative; }
+  .main_page__github-link {
+    background-image: linear-gradient(to left bottom, #000 50%, transparent 50%);
+    float: right;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    overflow: hidden; }
+    .main_page__github-link:hover .main_page__github-link--hover {
+      opacity: 1;
+      visibility: visible;
+      transition: all .5s; }
+    .main_page__github-link--hover {
+      color: #fff;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 60%;
+      left: 5%;
+      text-transform: uppercase;
+      opacity: 0;
+      visibility: hidden; }
+    .main_page__github-link::after {
+      content: "";
+      clear: both;
+      display: table; }
+  .main_page__github-img {
+    width: 59%;
+    transform: rotate(45deg);
+    float: right; }
+  .main_page__heading-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .main_page__heading-text {
+    font-size: 7.5rem;
+    color: #fff;
+    margin: 0;
     font-weight: 900;
-    font-size: 80px;
-}
+    letter-spacing: 1.9px;
+    cursor: default;
+    display: none;
+    text-rendering: optimizeLegibility; }
+    .main_page__heading-text-top {
+      display: block;
+      animation: moveFromLeft 1.5s ease-out 1s;
+      animation-fill-mode: backwards; }
+    .main_page__heading-text-bottom {
+      display: block;
+      animation: moveFromRight 1.5s ease-out 1s;
+      animation-fill-mode: backwards; }
+  .main_page .or {
+    display: inline-block;
+    animation: appear 1.5s ease-out 1s;
+    animation-fill-mode: backwards; }
+  .main_page__sub-links {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    color: #fff;
+    cursor: default;
+    display: none; }
+    .main_page__sub-links-github, .main_page__sub-links-resume {
+      text-decoration: none;
+      font-weight: 400; }
+    .main_page__sub-links-github:link,
+    .main_page__sub-links-github:visited {
+      display: inline-block;
+      color: #aaa;
+      border-bottom: 3px solid transparent;
+      padding-bottom: 3px;
+      transform: scale(1);
+      transition: transform .2s;
+      animation: moveFromBottom 1.5s ease-out 1s;
+      animation-fill-mode: backwards; }
+      .main_page__sub-links-github:hover {
+          border-bottom: 2px solid #fff;
+          transform: scale(1.05); }
+    .main_page__sub-links-resume:link,
+    .main_page__sub-links-resume:visited {
+      display: inline-block;
+      color: #fff;
+      animation: moveFromBottom 1.5s ease-out 1s;
+      animation-fill-mode: backwards; }
+      .main_page__sub-links-resume:hover {
+        color: #000; }
 
-.valign-wrapper {
-    min-height: 100%;
-}
-
-.github-link, .resume-link {
-    color: #e2e2e0;
-    font-weight: normal;
-    margin: 0px;
-    cursor: pointer;
-}
-
-.resume-link:hover{
-    color: black;
-}
-
-.github-link {
-    color: white;
-}
+.section-strength {
+  margin: 10rem 0;
+  cursor: default; }
+  .section-strength__heading {
+    font-size: 4rem;
+    margin-bottom: 10rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    color: #4b6cb7;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-rendering: optimizeLegibility; }
+    .section-strength__heading:hover {
+      border-bottom: 3px solid #4b6cb7; }
