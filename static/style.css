@@ -126,14 +126,12 @@ body {
     .main_page__sub-links-github:visited {
       display: inline-block;
       color: #aaa;
-      border-bottom: 3px solid transparent;
       padding-bottom: 3px;
       transform: scale(1);
       transition: transform .2s;
       animation: moveFromBottom 1.5s ease-out 1s;
       animation-fill-mode: backwards; }
       .main_page__sub-links-github:hover {
-          border-bottom: 2px solid #fff;
           transform: scale(1.05); }
     .main_page__sub-links-resume:link,
     .main_page__sub-links-resume:visited {
