@@ -5,31 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CheulHeeYoo.com</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="static/style.css">
 </head>
 <body id="main-body">
-    <div class="valign-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 offset-l3 s12 main-div">
-                    <img class="loadingGif" src="static/loading.gif" alt="loading">
-                    <div class="title">
-                        <h1 class="hello">Hello</h1>
-                        <h1 class="my-name">I'm Jason</h1>
-                        <a class="github-link" href="https://github.com/ChHeYo">Go to my Github</a> or
-                        <a class="resume-link" href="resume.html">view my resume</a>
-                        <br/>
-                        <a class="github-link" href="Natours/index.html">CSS & SASS Demo Link</a><br/>
-                        <a class="github-link" href="osprey/index.html">JavaScript & CSS Framework Demo Link</a>
-                    </div>
+    <main>
+        <section class="main_page">
+            <div class="main_page__github-link">
+                <figure>
+                    <a href="https://github.com/ChHeYo">
+                        <img class="main_page__github-img" src="static/github-link-light.png" alt="github-logo">
+                    </a>
+                </figure>
+                <p class="main_page__github-link--hover">My Repos</p>
+            </div>
+            <div class="main_page__heading-box">
+                <div class="main_page__loading">
+                    <figure>
+                        <img src="static/loading.gif" alt="progress-bar">
+                    </figure>
+                </div>
+                <h1 class="main_page__heading-text">
+                    <span class="main_page__heading-text-top">Hello</span>
+                    <span class="main_page__heading-text-bottom">I'm Jason</span>
+                </h1>
+                <div class="main_page__sub-links">
+                    <a href="https://github.com/ChHeYo" class="main_page__sub-links-github">Go to my github</a>
+                    <div class="or">or</div>
+                    <a href="resume.html" class="main_page__sub-links-resume">view my resume</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+        </section>
+    </main>
     <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
