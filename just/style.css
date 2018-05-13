@@ -16,6 +16,9 @@ body {
   body a {
     font-size: inherit; }
 
+.sm-margin--bot {
+  margin-bottom: 1rem !important; }
+
 @keyframes appear {
   0% {
     opacity: 0; }
@@ -41,6 +44,64 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
+input[class^="standard-sm"] {
+  width: 100%;
+  padding: 1rem 0.75rem;
+  font-size: 1.4rem;
+  color: #444;
+  font-family: inherit;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  transition: all .2s; }
+  input[class^="standard-sm"]:focus {
+    outline: none; }
+
+input[class^="standard-md"] {
+  width: 100%;
+  padding: 1.5rem 1.125rem;
+  font-size: 1.4rem;
+  color: #444;
+  font-family: inherit;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  transition: all .2s; }
+  input[class^="standard-md"]:focus {
+    outline: none; }
+
+input[class^="standard-lg"] {
+  width: 100%;
+  padding: 2rem 1.5rem;
+  font-size: 1.4rem;
+  color: #444;
+  font-family: inherit;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  transition: all .2s; }
+  input[class^="standard-lg"]:focus {
+    outline: none; }
+
+.standard-sm--check:focus,
+.standard-md--check:focus,
+.standard-lg--check:focus {
+  border-bottom: 1px solid #48c61d; }
+
+.standard-sm--grow:focus,
+.standard-md--grow:focus,
+.standard-lg--grow:focus {
+  transform: scale(1.03); }
+
+.heading--h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  animation: appear 2s ease-out;
+  color: #444; }
+
+.heading--h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  animation: appear 2s ease-out;
+  color: #444; }
 
 .section-main {
   min-height: 60vh;
@@ -81,31 +142,40 @@ body {
 .section-intro {
   text-align: center;
   font-size: 1.3rem;
-  padding: 10rem 0;
+  padding: 10rem 0 !important;
   background-color: #f9f9f9; }
 
 .section-grid {
   text-align: center;
-  color: #444;
-  padding: 10rem 0;
+  padding: 10rem 0 !important;
   font-size: 1.2rem; }
   .section-grid > .container {
     margin-bottom: 1rem;
     line-height: 2; }
+    .section-grid > .container .row {
+      background-color: #fff; }
     @media (max-width: 37.5em) {
       .section-grid > .container {
         margin-bottom: 0; } }
-  .section-grid__heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 400;
-    animation: appear 2s ease-out; }
   .section-grid__paragraph {
     font-size: 1.3rem;
-    margin-bottom: 6rem; }
+    margin-bottom: 3rem; }
   .section-grid div[class^="col-"] {
     border-radius: 3px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    background-color: #eee; }
+
+.section-input {
+  padding: 10rem 0 !important;
+  background-color: #f9f9f9;
+  text-align: center;
+  line-height: 2; }
+  .section-input .row {
+    display: flex;
+    align-items: center; }
+    @media (max-width: 37.5em) {
+      .section-input .row {
+        display: block; } }
 
 .container {
   margin: 0 auto;
@@ -115,64 +185,55 @@ body {
     .container {
       padding: 0 2rem; } }
 
-.row {
-  background-color: #fff; }
-  .row div[class^="col-"] {
-    background-color: #eee;
-    float: left;
-    margin-bottom: 2rem; }
-    .row div[class^="col-"]:not(:last-of-type) {
-      margin-right: 2rem; }
-    @media (max-width: 37.5em) {
-      .row div[class^="col-"] {
-        width: 100% !important; } }
-  .row:last-child div[class^="col-"] {
+.row div[class^="col-"] {
+  float: left;
+  margin-bottom: 2rem; }
+  .row div[class^="col-"] .row div[class^="col-"] {
     margin-bottom: 0; }
-    @media (max-width: 37.5em) {
-      .row:last-child div[class^="col-"]:nth-last-child(2) {
-        margin-bottom: 2rem; } }
-  .row .col-1-2 {
-    width: calc((100% - 2rem * 1) / 2); }
-  .row .col-1-3 {
-    width: calc((100% - 2rem * 2) / 3); }
-  .row .col-2-3 {
-    width: calc(2 * calc((100% - 2rem * 2) / 3)  + (2 - 1) * 2rem); }
-  .row .col-1-4 {
-    width: calc((100% - 2rem * 3) / 4); }
-  .row .col-2-4 {
-    width: calc(2 * calc((100% - 2rem * 3) / 4)  + (2 - 1) * 2rem); }
-  .row .col-3-4 {
-    width: calc(3 * calc((100% - 2rem * 3) / 4)  + (3 - 1) * 2rem); }
-  .row .col-offset-1-2 {
-    margin-left: calc(calc((100% - 2rem * 1) / 2) + 2rem); }
-    @media (max-width: 37.5em) {
-      .row .col-offset-1-2 {
-        margin-left: 0; } }
-  .row .col-offset-1-3 {
-    margin-left: calc(calc((100% - 2rem * 2) / 3) + 2rem); }
-    @media (max-width: 37.5em) {
-      .row .col-offset-1-3 {
-        margin-left: 0; } }
-  .row .col-offset-2-3 {
-    margin-left: calc(calc(2 * calc((100% - 2rem * 2) / 3)  + (2 - 1) * 2rem) + 2rem); }
-    @media (max-width: 37.5em) {
-      .row .col-offset-2-3 {
-        margin-left: 0; } }
-  .row .col-offset-1-4 {
-    margin-left: calc(calc((100% - 2rem * 3) / 4) + 2rem); }
-    @media (max-width: 37.5em) {
-      .row .col-offset-1-4 {
-        margin-left: 0; } }
-  .row .col-offset-2-4 {
-    margin-left: calc(calc(2 * calc((100% - 2rem * 3) / 4)  + (2 - 1) * 2rem) + 2rem); }
-    @media (max-width: 37.5em) {
-      .row .col-offset-2-4 {
-        margin-left: 0; } }
-  .row .col-offset-3-4 {
-    margin-left: calc(calc(3 * calc((100% - 2rem * 3) / 4)  + (3 - 1) * 2rem) + 2rem); }
-    @media (max-width: 37.5em) {
-      .row .col-offset-3-4 {
-        margin-left: 0; } }
+  .row div[class^="col-"]:not(:last-of-type) {
+    margin-right: 2rem; }
+
+.row .col-1-2 {
+  width: calc((100% - 2rem * 1) / 2); }
+
+.row .col-1-3 {
+  width: calc((100% - 2rem * 2) / 3); }
+
+.row .col-2-3 {
+  width: calc(2 * calc((100% - 2rem * 2) / 3)  + (2 - 1) * 2rem); }
+
+.row .col-1-4 {
+  width: calc((100% - 2rem * 3) / 4); }
+
+.row .col-2-4 {
+  width: calc(2 * calc((100% - 2rem * 3) / 4)  + (2 - 1) * 2rem); }
+
+.row .col-3-4 {
+  width: calc(3 * calc((100% - 2rem * 3) / 4)  + (3 - 1) * 2rem); }
+
+.row .col-offset-1-2 {
+  margin-left: calc(calc((100% - 2rem * 1) / 2) + 2rem); }
+
+.row .col-offset-1-3 {
+  margin-left: calc(calc((100% - 2rem * 2) / 3) + 2rem); }
+
+.row .col-offset-2-3 {
+  margin-left: calc(calc(2 * calc((100% - 2rem * 2) / 3)  + (2 - 1) * 2rem) + 2rem); }
+
+.row .col-offset-1-4 {
+  margin-left: calc(calc((100% - 2rem * 3) / 4) + 2rem); }
+
+.row .col-offset-2-4 {
+  margin-left: calc(calc(2 * calc((100% - 2rem * 3) / 4)  + (2 - 1) * 2rem) + 2rem); }
+
+.row .col-offset-3-4 {
+  margin-left: calc(calc(3 * calc((100% - 2rem * 3) / 4)  + (3 - 1) * 2rem) + 2rem); }
+
+@media (max-width: 37.5em) {
+  .row-block div[class^="col-"] {
+    width: 100% !important; }
+  .row-block div[class^="col-offset-"] {
+    margin-left: 0 !important; } }
 
 .container::after,
 .row::after {
